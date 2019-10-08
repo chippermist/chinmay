@@ -1,7 +1,7 @@
 //pshape tiling
 PShape skull;
-float rW = 10;
-float rH = 10;
+float rW = 30;
+float rH = 30;
 float[] patternA = {0.5, 1, 0.25, 0.75};
 float[] patternB = {1, 0.5, 0.75, 0.25};
 float[] patternC = {0.75, 0.25, 1, 0.5};
@@ -71,8 +71,8 @@ void drawSeed(float x, float y, float r) {
   fill(fillColorR, fillColorB, fillColorG);
   shape(skull,0,0,rW,rH);
   // creating random strokes
-  line(rW/2 + random(10),-rH/2 + random(10),-rW/2 + random(10),rH/2 + random(10));
-  line(rW/2 - 2,-rH/2 - 2,-rW/2 - 2,rH/2 - 2);
+  line(rW/2 + random(8+r),-rH/2 + random(8+r),-rW/2 + random(8+r),rH/2 + random(8+r));
+  line(rW/2 - r,-rH/2 - r,-rW/2 - r,rH/2 - r);
   skull.enableStyle();
   popMatrix();
 }
