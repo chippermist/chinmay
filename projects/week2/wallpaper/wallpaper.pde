@@ -28,7 +28,15 @@ void setup() {
   noFill();
   popMatrix();
   
+  rectMode(CENTER);
+  strokeWeight(8);
+  
+  //for(int i=25; i<400; i+=25) {
+  //  rect(width/2, height/2,  400+i, 400+i, radians(60));
+  //}
+  
   drawEdges();
+  //save("try6.png");
 }
 
 void draw() { 
