@@ -1,7 +1,7 @@
 //pshape tiling
 PShape skull;
-float rW = 30;
-float rH = 30;
+float rW = 10;
+float rH = 10;
 float[] patternA = {0.5, 1, 0.25, 0.75};
 float[] patternB = {1, 0.5, 0.75, 0.25};
 float[] patternC = {0.75, 0.25, 1, 0.5};
@@ -38,7 +38,7 @@ void setup() {
       }
     }
   }
-  //save("scale10.png");
+  save("scale10.png");
 }
 void draw() {
 }
