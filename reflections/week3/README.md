@@ -1,0 +1,10 @@
+# Week 3 Reflection
+
+## Design Galleries
+
+This paper introuduces the challenges and a talks about it's solution to parameter adjustment. It touches on a very similar idea that can be seen not just in graphics but also in machine learning as a whole where adjusting parameters to fit the needs can be a manual and tedious process. I like their approach of computer assisted adjustment however it doesn't talk about this could be limited to it's implementation. They provide a good amount of examples within their experiements showing how it can take upto 1/6th the time but it's also for specific use cases. They don't talk about their configuration in the experiements which is commonly discussed prior to talking about results in most research papers which I thought was a bit weird. But I think since this is a old paper a lot of this is outdates now due to massive changes in computing power. However, this is a very good example of how computation and it's advacements have affected visual art. But I guess we could ask the question if this is just another way to take away free will in art? It seems like the way the q_score is calculated it is possible that it will always lean towards a singular pattern for figuring out a correct dispersion value. But this would remove the effect of being natural and human in the art itself that sort of connects us to it. 
+
+
+## Design as Exploration
+
+I think this paper starts off by asking a very good question by itself "how might authoring environments support designers in creating and managing design options?". They propose a interesting interface to make the tasks faster using Juxtapose which I think is a very useful idea in HCI. But there are some limitations such as the fact that it only works for Boolean and Integer values. It's very interesting to think about that with a tool like this someone with not much time and technical knowledge could be able to create artwork without worrying about details they would need to spend a huge amount of time on. I think it's a paper that makes me think about so many new possibilities in this area.
