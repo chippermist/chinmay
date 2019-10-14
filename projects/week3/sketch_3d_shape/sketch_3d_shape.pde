@@ -5,12 +5,14 @@ int resolution = 25;
 
 float frequency = 0.1;
 float amplitude = 1.0;
-float lanternHeight = 500;
+float objectHeight = 500;
+int shapeTypes = 1;
 
 Controller ringResSlider;
 Controller freqSlider;
 Controller amplitudeSlider;
 Controller heightSlider;
+Controller shapeType;
 
 
 void setup() {
@@ -32,20 +34,18 @@ void setup() {
     .setRange(1.0, 6);
     ;
 
-
-  heightSlider = cp5.addSlider("lanternHeight")
-    .setPosition(25, 100)
-    .setRange(100, height-10)
-    ;
-
-
+  shapeType = cp5.addDropdownList("shapeTypes")
+    .setPosition(25, 125)
+    .addItem("QUADS", 1)
+    .addItem("QUAD_STRIP", 2)
+    .addItem("TRIANGLES_FAN", 3);
  
 }
 
 
 void draw() {
 int rowNum = 50;
-float quadHeight = lanternHeight/rowNum;
+float quadHeight = objectHeight/rowNum;
 
   background(0);
   lights();
@@ -57,8 +57,19 @@ float quadHeight = lanternHeight/rowNum;
   rotateY((float)(frameCount * Math.PI/2 / 400));
 
   Point3D[][] verticies = calculateVerticies(rowNum, quadHeight);
-
-  beginShape(QUADS);
+  
+  switch((int)shapeType.getValue()) {
+    case 1:
+      beginShape(QUADS);
+      break;
+    case 2:
+      beginShape(QUAD_STRIP);
+      break;
+    case 3:
+      beginShape(TRIANGLE_FAN);
+      break;
+  }
+  
   for (int i=1; i<verticies.length; i++) {
     Point3D[] pointListTop = verticies[i-1];
     Point3D[] pointListBottom = verticies[i];
