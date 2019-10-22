@@ -43,7 +43,9 @@ void draw() {
       noFill();
       strokeWeight(1);
       stroke(R, B, G);
-      circle(0,0,tileSize*0.75);
+      rotate(angle);
+      //circle(0,0,tileSize*0.75);
+      quad(0,0, tileSize*0.45, tileSize*0.55, tileSize*1.22, tileSize*1.16, tileSize*0.80, tileSize*0.80);
       
       //hand
       pushMatrix();

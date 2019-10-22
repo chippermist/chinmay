@@ -1,0 +1,5 @@
+# Week 4 - Generative Design
+
+I wanted to do something that changes with the motion from the user so I decided to have a generative design that uses the location of the mouse to determine the angle. The one thing that sets something visually apart from me is the differenmce between uniformity and chaos so I thought I would determine the color based on the scale the user was looking at and normalize it based on size. So the closer someone got to it, it would essentially be colorless while being colorful as far away as someone got. 
+
+I used an image of the hand that I converted into an SVG to use for this. I wanted it to be kinda *Halloweeny* so I decided to use a monster hand. Whenever user moves their mouse or changes the size it will automatically change the color and the angle based on the location. 
