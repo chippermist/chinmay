@@ -29,8 +29,8 @@ void draw() {
   noiseDetail(octaves,falloff);
   gridResolutionX = round(width/tileSize);
   gridResolutionY = round(height/tileSize);
-  float noiseXRange = mouseX/100.0;
-  float noiseYRange = mouseY/100.0;
+  float noiseXRange = mouseX/100.0*PI;
+  float noiseYRange = mouseY/100.0*PI/2;
   int R=0, B=0, G=0;
   
   for(int y=0; y<=gridResolutionY; ++y) {
