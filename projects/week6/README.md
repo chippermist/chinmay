@@ -1,0 +1,5 @@
+# Week 6 Color Picker
+
+For this weeks project I decided to support the practice of exploration with a hint of randomness to the color picking element. Which means I am taking away the complete control from the user to be able to enter a value for RBG or select using dials but give a slight context of what colors they'd like tampered with and then have that color be generated with a variation of gaussian randomness. This is done very simply by providing the user 4 options. They can select if they want to change RGB or a Random option. With RGB that are kind of seld explainatory, it changes values for those specific colors. However with Random it changes all of them. 
+
+This approach constraints the user to be able to pick only from the generated colors at that particular time, and be able to draw using that. This is intended for people who want to try colors with minimal constraints provided by them.
