@@ -11,6 +11,7 @@ CheckBox checkBox;
 int size = 20;
 
 Swatch swatch;
+Swatch selectedSwatch;
 ArrayList<Swatch> swatches;
 
 
@@ -46,8 +47,6 @@ void draw() {
     swatches.get(i).draw();  
   }
   
-  
-  
 }
 
 void keyPressed() {
@@ -75,6 +74,12 @@ void mousePressed() {
   shapes.clear();
   DShape s1 = dManager.addShape();
   shapes.add(s1);
+  
+  Swatch s = checkForSwatchHit(mouseX,mouseY);
+  if(s != null && s.locked){
+     s.selected = true;
+    selectedSwatch = s;
+  }
 }
 
 void mouseDragged() {
@@ -89,8 +94,30 @@ void mouseDragged() {
   println(R, G, B);
 }
 
+void mouseClicked(MouseEvent evt) {
+  if (evt.getCount() == 2){
+    Swatch s = checkForSwatchHit(mouseX,mouseY);
+    if(s != null){
+      s.locked = true;
+      s.rad = 40;
+    }
+  }
+}
+
+Swatch checkForSwatchHit(int x,int y){
+   for(int i=swatches.size()-1;i>=0;i--){
+   Swatch s = swatches.get(i);
+   boolean hitTest = s.hitTest(x,y);
+   
+   if(hitTest == true){
+       return s;
+   }
+  } 
+  return null;
+}
+
 void generateColors(boolean red, boolean green, boolean blue, boolean r) {
-  float dist = map(height/2,0,width/2,0,40);
+  float dist = map(mouseX/2,0,mouseY/2,0,40);
   int newR = R, newB = B, newG = G;
   if(red) {
     newR = round(randomGaussian()*dist+R) % 255;
@@ -111,7 +138,7 @@ void generateColors(boolean red, boolean green, boolean blue, boolean r) {
   }
   
   // generating color swatches
-  Swatch newSwatch = new Swatch(mouseX, mouseY, 40, newR, G, B);
+  Swatch newSwatch = new Swatch(mouseX, mouseY, 40, newR, newB, newG);
   swatches.add(newSwatch);
   R = newR; B = newB; G = newG;
 
