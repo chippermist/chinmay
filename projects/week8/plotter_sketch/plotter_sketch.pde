@@ -5,7 +5,15 @@ size(792,612);
 beginRecord(PDF, "plot.pdf");
 noFill();
 
-circle(width/2, height/2, 400);
+//circle(width/2, height/2, 400);
+for(int i=0; i<10; ++i) {
+  circle(width/2+i+5, height/2+i+5, 400);
+}
+
+for(int i=0; i<10; ++i) {
+  circle(width/2+i-5, height/2+i-5, 400);
+}
+
 for(int i=0; i<20; ++i) {
   pushMatrix();
   translate(width/2,height/2);
@@ -13,12 +21,13 @@ for(int i=0; i<20; ++i) {
   scale(1.9);
   rotate(i*radians(30));
   translate(0, -60);
-  triangle(-30, 30, 0, -30, 30, 30);
+  //triangle(-30, 30, 0, -30, 30, 30);
+  triangle(-30, 30+i, 0, -30+i, 30, 30+i);
   popMatrix();
 }
 
 for(int i=0; i<5; ++i) {
-circle(width/2, height/2, 100 + i);
+//circle(width/2, height/2, 100 + i);
 }
 
 endRecord();
