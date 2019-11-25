@@ -1,16 +1,26 @@
 # Final Project Proposal
 
-For the final project, I would love to explore the generative artwork topic. I loved thinking about and researching all kinds of various artforms people have created using multiple stimulants as well as an array of technological tools including ML. Some of the artworks discussed in the class were very interesting to look at that used basic recursion as well as randomness to generate something beautiful. 
+### Idea
 
-I'm interested in exploring something similar where I can provide a dataset of real world images and be able to generate art. This would be interesting to be compared to standard methods of generating computational art such as the ones that utilize different fundamentals such as the ones we discussed in class, while also learning more about how certain models such as Markov Chains affect the probaility in different states of models and affect the outcome. 
+After looking into the possible project using GANs, I wasn't particular impressed by the results and thought the time would not be enough to be able to train and modify a GAN model to obtain a good result. So instead I will continue and expand on my last library project. I will add elements that could be used to create landscape drawings in processing. Some of these will include adding the ability to add a background sky with different variations, adding water given a specific limit on the frame height and being able to add other objects such as basic trees, and weather elements. 
 
-I will try to do this by exploring which different GANs can be used to produce and fine tune image generation. I will use an available dataset like the one below in order to train my model. This will be challenging since I have never used GANs before and it will be a new opportunity to apply mathematical principles in a network to use. 
+Along with this I would like to create about 4-5 examples of landscape drawings using this library along with some other processing includes as examples. Building up on my initial idea of using GAN to generate abstract images, I will instead use these processing generated artwork to create a more artistic stylized image. I played around with RunwayML since they have pre-trained models with larger datasets and got significantly better results than the locally trained model. I will use this to stylize my library examples into a more relistic look. 
 
-### Resources
+Some example functions within the library will look like:
+`mountain(...)` - draw mountains
+`tree(...)` - draw trees
+`snowflake(...)` - draw snowflakes
+`sun()` - draw sun
+`sky(LAYERED/SOLID)` - draw different types of sky
+`water()` - draw water body
+`noise()`- add noise within different shapes...amongst others...
 
-Possible datasets:
+### Process
 
-- https://www.kaggle.com/ikarus777/best-artworks-of-all-time
+- Add more abstract shapes such as trees, weather elements etc. into the Abstract Shapes (maybe Landscape Maker) library
+- Create landscape drawings using this library within Processing
+- Use RunwayML to convert these computer generated images into more realistic hand drawn landscapes. 
 
-- https://towardsdatascience.com/gangogh-creating-art-with-gans-8d087d8f74a1
+### Who is this useful for?
 
+This library will be useful for people who want to be able to quickly draw certain shapes etc. that require a lot of effort using primitives, and who want to be able to control the designs using built-in processing functions. Using these artists can quickly draw something. 
