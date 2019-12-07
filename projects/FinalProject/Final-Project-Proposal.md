@@ -5,7 +5,6 @@
 After looking into the possible project using GANs, I wasn't particular impressed by the results and thought the time would not be enough to be able to train and modify a GAN model to obtain a good result. So instead I will continue and expand on my last library project. I will add elements that could be used to create landscape drawings in processing. Some of these will include adding the ability to add a background sky with different variations, adding water given a specific limit on the frame height and being able to add other objects such as basic trees, and weather elements. 
 
 Along with this I would like to create about 4-5 examples of landscape drawings using this library along with some other processing includes as examples. Building up on my initial idea of using GAN to generate abstract images, I will instead use these processing generated artwork to create a more artistic stylized image. I played around with RunwayML since they have pre-trained models with larger datasets and got significantly better results than the locally trained model. I will use this to stylize my library examples into a more relistic look. 
->>>>>>> cc79c3dfb138dbdeac31595ea12994542f611bff
 
 Some example functions within the library will look like:
 `mountain(...)` - draw mountains
